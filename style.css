@@ -17,6 +17,61 @@ body {
     display: flex;
     justify-content: center;
 }
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+.navigation {
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #0065FC; 
+    font-weight: bold; 
+}
+
+.search-section {
+    padding: 20px;
+}
+
+.search-section h1 {
+    color: #333; 
+}
+
+.search-section p {
+    color: #666; 
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0065FC; 
+    color: white;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+
 
 .main-container {
     width: 100%;
@@ -120,6 +175,8 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
 
 
 
