@@ -25,6 +25,7 @@ body {
 
 header {
     display: flex; 
+    flex-wrap: wrap;
     justify-content: space-between; 
     align-items: center; 
     padding: 10px;
@@ -44,11 +45,29 @@ nav a{
     text-decoration: none;
     color: black; 
     font-weight: bold; 
+    position: relative; /* Position relative pour les pseudo-éléments */
+    padding: 10px 0;
  }
 
 nav a:hover{
-    color: blue;
-    text-decoration-line: overline;
+    color: #0065FC;
+    
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 0;
+    height: 2px; 
+    background: #0065FC; 
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    width: 100%; /* La bordure s'étend sur toute la largeur au survol/focus */
 }
 
 .search-section {
@@ -102,6 +121,14 @@ nav a:hover{
     height: 49px;
     border: #F2F2F2;
     border-radius: 15px 0px 0px 15px !important;
+}
+
+.search-button .button-text {
+    display: inline; 
+}
+
+.search-button .button-icon {
+    display: none; 
 }
 
 .filtres{
@@ -250,6 +277,7 @@ a {
 .show-more {
     font-size: 18px; 
     font-weight: 700;
+    padding: 30px;
 }
 
 .show-more:hover{
@@ -262,12 +290,16 @@ a {
     width: 32%;
     gap: 20px; 
     padding: 36px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
-    
+}
+
+.populaires{
+    width: 32%
 }
 
 .populaires-cards .card {
@@ -324,6 +356,10 @@ a {
 .activites h2 {
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+.activites h3{
+    padding: 20px 19px;
 }
 
 .activite-container {
@@ -402,6 +438,14 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    nav {
+        gap: 6px; /* Réduire l'espace entre les liens */
+    }
+
+    nav a {
+        font-size: 14px; /* Réduire la taille de la police pour économiser de l'espace */
+        padding: 5px; /* Réduire le padding autour des liens pour économiser de l'espace */
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -412,13 +456,18 @@ a {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        margin: auto;
+        padding: 20px;
     }
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .populaires-cards .card{
+        flex: 0 1 calc(50% - 20px);
     }
 
     .populaires-cards a {
@@ -439,10 +488,52 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    header {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img {
+        margin-bottom: 20px; 
+    }
+
+    nav {
+        display: flex;
+        width: 100%; 
+        justify-content: center; 
+        
+    }
+
+    nav a {
+        width: 100%; 
+        text-align: center; 
+        padding: 10px 0; 
+        box-sizing: border-box; 
+        border-bottom: 1px solid transparent; 
+        font-size: 18px;
+    }
+
+    nav a::after {
+        bottom: 0; 
+    }
+    
     .hebergements {
         grid-template-columns: 1fr; 
     }
     .activite-container {
         grid-template-columns: 1fr; 
+    }
+
+    .populaires {
+        width: 100%; 
+        padding: 20px; 
+    }
+
+    .populaires-cards .card {
+        flex-basis: 100%; 
+        max-width: 100%; 
+        margin-top: 20px; 
     }
 }
