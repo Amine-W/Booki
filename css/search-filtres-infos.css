@@ -1,0 +1,225 @@
+/* Section group__info */
+
+/* H1 - paragraphe */
+
+.text__hebergement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 8px;
+    font-family: var(--font);
+    color: var(--black);
+}
+
+.title__h1 {
+    font-size: var(--font-size-bold);
+}
+
+.paragraphe__h1 {
+transform: translateY(-30px);
+font-size: var(--font-size-regular);
+}
+
+/* find__herbergement part button */
+
+.find__herbergement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 49px;
+    max-width: 377px;
+    transform: scale(0.8);
+    transform-origin: top left;
+    gap: 24px;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    background: var(--white);
+}
+
+.icon__localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 49px;
+    flex-shrink: 0;
+    background-color: var(--grey);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.button__recherche {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px 16px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid var(--blue);
+    background: var(--blue);
+    color: var(--white);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+}
+
+.barre__recherche {
+    color: var(--black);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    border: none;
+}
+
+.barre__recherche:focus {
+    outline: none;
+}
+
+.icon-recherche {
+    display: none;
+}
+
+/* Settings filtres */
+
+.filtres {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 15px;
+    padding: 35px 0;
+}
+
+.span__filtres {
+    display: flex;
+    font-size: var(--font-size-medium);
+    font-family: var(--font);
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+    line-height: normal;
+}
+
+.filtres__button {
+    display: flex;
+    gap: 15px;
+}
+
+.button__filtres {
+    display: flex;
+    height: 50px;
+    padding: 4px 19px;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--grey-tint-2);
+    background-color: var(--white);
+    font-size: var(--font-size-regular);
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fa-solid:not(.fa-xs) {
+    font-size: 22px;
+}
+
+.button__filtres:hover,
+.button__filtres:focus {
+    background-color: #DEEBFF;
+}
+
+/* Settings groupe info */
+
+.groupe__info {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    padding-bottom: 35px;
+}
+
+.text__info {
+    font-size: var(--font-size-regular);
+    font-family: var(--font);
+    line-height: normal;
+    color: var(--black);
+}
+
+
+@media (max-width: 1024px) {
+    .filtres {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 35px;
+    }
+    
+    .span__filtres {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .group__info{
+        padding: 0 20px;
+    }
+    .groupe__info {
+        margin-top: 110px;
+    }
+    
+    .find__herbergement {
+        height: 49px;
+        width: 335px;
+        gap: 0;
+    }
+
+    .text-recherche {
+        display: none;
+    }
+
+    .icon-recherche {
+        display: inline-block;
+    }
+
+    .button__recherche {
+        border-radius: 15px;
+    }
+    
+    .icon__localisation, .barre__recherche, .button__recherche {
+        flex-shrink: 1;
+    }
+
+    .filtres__button {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    .button__filtres {
+        flex-basis: calc(50% - 10px);
+        font-size: 14px;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        display: flex; 
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .fa-solid:not(.fa-xs) {
+        font-size: 16px;
+    }
+
+    .groupe__info {
+        margin-top: 110px;
+    }
+
+    .title__h1 {
+        font-size: 18px;
+    }
+
+    .paragraphe__h1 {
+        font-size: 14px;
+    }
+}

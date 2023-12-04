@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--grey);
+}
+
+.footer__info {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+@media (max-width: 767.98px) {
+    .footer {
+        display: block; /* Afficher les éléments du footer en bloc (un en dessous de l'autre) */
+    }
+
+    .footer__info {
+        text-align: center; /* Centrer le texte */
+        margin-top: 15px; /* Ajouter un espace entre les éléments */
+    }
+}
