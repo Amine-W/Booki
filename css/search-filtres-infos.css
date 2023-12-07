@@ -204,7 +204,7 @@ font-size: var(--font-size-regular);
         box-sizing: border-box;
         display: flex; 
         align-items: center;
-        gap: 8px;
+        gap: 10px;
     }
     
     .fa-solid:not(.fa-xs) {
