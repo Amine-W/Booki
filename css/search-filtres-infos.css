@@ -28,8 +28,7 @@ font-size: var(--font-size-regular);
     align-items: center;
     justify-content: space-between;
     height: 49px;
-    max-width: 377px;
-    transform: scale(0.8);
+    width: 377px;
     transform-origin: top left;
     gap: 24px;
     border: 1px solid var(--grey);
@@ -169,7 +168,7 @@ font-size: var(--font-size-regular);
     
     .find__herbergement {
         height: 49px;
-        width: 335px;
+        width: 100%;
         gap: 0;
     }
 
